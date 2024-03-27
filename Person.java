@@ -34,6 +34,12 @@ class Employee extends Person {
         this.salary = salary;
     }
 
+    public void displayEmployeeDetails() {
+        displayPersonName();
+        displayAge();
+        System.out.println("Employee ID: " + empId);
+        System.out.println("Salary: $" + salary);
+    }
 }
 
  class Test {
@@ -42,5 +48,8 @@ class Employee extends Person {
         person.displayPersonName();
         person.displayAge();
 
+        Employee employee = new Employee("Jane Smith", "1985-08-25", "E12345", 75000.0);
+        employee.displayEmployeeDetails();
+    }
 }
- }
+
